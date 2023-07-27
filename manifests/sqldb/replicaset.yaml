@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: sqldb-rep
+  namespace: sqldb
+  labels:
+    app: mysql
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+        - name: sqldb-images
+          image: 792411911957.dkr.ecr.us-east-1.amazonaws.com/sqldb-images:v0.1
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: marco
+          ports:
+            - containerPort: 3306
