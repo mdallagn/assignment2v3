@@ -34,3 +34,7 @@ override.tf.json
 terraform.rc
 
 .c9/
+
+.terraform.lock.hcl
+assignment2
+assignment2.pub
