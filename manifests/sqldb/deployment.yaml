@@ -20,6 +20,6 @@ spec:
           image: 792411911957.dkr.ecr.us-east-1.amazonaws.com/sqldb-images:v0.1
           env:
             - name: MYSQL_ROOT_PASSWORD
-              value: marco
+              value: pw
           ports:
             - containerPort: 3306

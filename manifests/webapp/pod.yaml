@@ -9,11 +9,11 @@ spec:
       image: 792411911957.dkr.ecr.us-east-1.amazonaws.com/webapp-images:v0.1
       env:
         - name: DBPWD
-          value: marco
+          value: pw
         - name: DBUSER
           value: root
         - name: DBHOST
-          value: "mysql.database.svc.cluster.local" # hostname of the dabase server
+          value: 10.244.0.7 # hostname of the dabase server
         - name: DBPORT
           value: "3306"
       ports:
